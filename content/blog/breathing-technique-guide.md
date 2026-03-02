@@ -2,7 +2,7 @@
 title: "불안할 때 바로 쓸 수 있는 호흡법 3가지"
 date: "2026-02-25"
 summary: "과학적으로 검증된 호흡법으로 즉각적인 안정을 찾는 방법을 소개합니다."
-thumbnail: null
+thumbnail: "/blog/breathing-guide.svg"
 ---
 
 ## 호흡으로 뇌를 안정시키는 법

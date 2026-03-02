@@ -14,71 +14,88 @@ export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
-    <div className="pt-24 pb-20 min-h-screen bg-background">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <p className="text-sm font-medium text-brand mb-3 tracking-wide uppercase">
+    <div className="min-h-screen bg-background">
+      {/* Dark Hero Banner */}
+      <section className="bg-mesh-dark pt-28 pb-16 sm:pt-32 sm:pb-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-sm font-medium text-brand-lighter mb-3 tracking-wide uppercase">
             Newsletter
           </p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground tracking-tight mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
             집중력과 뇌과학 이야기
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-white/60">
             터틀리가 전하는 집중력, 명상, 뇌과학에 대한 유익한 콘텐츠
           </p>
         </div>
+      </section>
 
-        {posts.length === 0 ? (
-          <div className="text-center py-20">
-            <Image
-              src="/logo.png"
-              alt=""
-              width={48}
-              height={48}
-              className="mx-auto mb-4 rounded-xl opacity-40"
-            />
-            <p className="text-lg text-muted-foreground">
-              곧 새로운 콘텐츠가 업로드됩니다.
-            </p>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {posts.map((post) => (
-              <Link
-                key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="group"
-              >
-                <Card className="glass border-border/50 overflow-hidden hover:border-brand/20 hover:shadow-lg hover:shadow-brand/5 transition-all h-full">
-                  <div className="aspect-video bg-gradient-to-br from-brand-50 to-brand-100/50 flex items-center justify-center">
-                    <Image
-                      src="/logo.png"
-                      alt=""
-                      width={32}
-                      height={32}
-                      className="opacity-20 rounded-md"
-                    />
-                  </div>
-                  <CardContent className="p-5 flex flex-col flex-1">
-                    <time className="text-xs text-muted-foreground mb-2">
-                      {post.date}
-                    </time>
-                    <h2 className="text-base font-semibold text-foreground group-hover:text-brand transition-colors mb-2 line-clamp-2">
-                      {post.title}
-                    </h2>
-                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 flex-1">
-                      {post.summary}
-                    </p>
-                    <span className="mt-3 text-sm font-medium text-brand">
-                      읽어보기 &rarr;
-                    </span>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
-          </div>
-        )}
-      </div>
+      {/* Posts Grid */}
+      <section className="py-16 sm:py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          {posts.length === 0 ? (
+            <div className="text-center py-20">
+              <Image
+                src="/logo.png"
+                alt=""
+                width={48}
+                height={48}
+                className="mx-auto mb-4 rounded-xl opacity-40"
+              />
+              <p className="text-lg text-muted-foreground">
+                곧 새로운 콘텐츠가 업로드됩니다.
+              </p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {posts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="group"
+                >
+                  <Card className="glass border-border/50 overflow-hidden hover:border-brand/20 hover:shadow-lg hover:shadow-brand/5 transition-all duration-300 h-full">
+                    <div className="aspect-video relative overflow-hidden">
+                      {post.thumbnail ? (
+                        <Image
+                          src={post.thumbnail}
+                          alt={post.title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-gradient-to-br from-brand-900 to-brand-dark flex items-center justify-center">
+                          <Image
+                            src="/logo.png"
+                            alt=""
+                            width={32}
+                            height={32}
+                            className="opacity-20 rounded-md"
+                          />
+                        </div>
+                      )}
+                    </div>
+                    <CardContent className="p-5 flex flex-col flex-1">
+                      <time className="text-xs text-muted-foreground mb-2">
+                        {post.date}
+                      </time>
+                      <h2 className="text-base font-semibold text-foreground group-hover:text-brand transition-colors mb-2 line-clamp-2">
+                        {post.title}
+                      </h2>
+                      <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 flex-1">
+                        {post.summary}
+                      </p>
+                      <span className="mt-3 text-sm font-medium text-brand">
+                        읽어보기 &rarr;
+                      </span>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
     </div>
   );
 }

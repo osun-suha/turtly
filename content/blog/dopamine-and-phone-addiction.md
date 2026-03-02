@@ -2,7 +2,7 @@
 title: "스마트폰을 내려놓기 어려운 진짜 이유 — 도파민의 비밀"
 date: "2026-02-20"
 summary: "도파민 시스템이 어떻게 우리의 집중력을 방해하는지, 그리고 회복하는 방법을 알아봅니다."
-thumbnail: null
+thumbnail: "/blog/dopamine-phone.svg"
 ---
 
 ## 왜 스마트폰을 내려놓기가 이렇게 어려울까?

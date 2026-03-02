@@ -2,7 +2,7 @@
 title: "명상이 집중력에 미치는 과학적 효과"
 date: "2026-03-01"
 summary: "하버드 연구팀이 밝힌 명상과 뇌 구조 변화의 관계를 알아봅니다."
-thumbnail: null
+thumbnail: "/blog/meditation-focus.svg"
 ---
 
 ## 명상은 정말 집중력을 높일까?

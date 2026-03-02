@@ -16,7 +16,7 @@ export default function Header() {
   const [showStoreMenu, setShowStoreMenu] = useState(false);
   const pathname = usePathname();
 
-  const hasDarkHero = pathname === "/" || pathname === "/privacy" || pathname === "/terms";
+  const hasDarkHero = pathname === "/" || pathname === "/privacy" || pathname === "/terms" || pathname.startsWith("/blog");
   const useWhiteText = hasDarkHero && !scrolled;
 
   useEffect(() => {

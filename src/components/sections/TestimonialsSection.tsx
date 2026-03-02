@@ -59,7 +59,7 @@ function TestimonialCard({
     <div
       className={`bg-gradient-to-br ${testimonial.gradient} rounded-2xl p-6 sm:p-8 flex flex-col justify-between aspect-square`}
     >
-      <p className="text-xl sm:text-xl font-bold text-gray-900 leading-snug">
+      <p className="text-lg sm:text-xl font-bold text-gray-900 leading-snug">
         &ldquo;{testimonial.text}&rdquo;
       </p>
 
