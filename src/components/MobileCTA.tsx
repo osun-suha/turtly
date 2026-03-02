@@ -21,11 +21,20 @@ export default function MobileCTA() {
         isVisible ? "translate-y-0" : "translate-y-full"
       }`}
     >
-      <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
-        <Button className="w-full btn-gradient text-white rounded-xl h-12 text-base font-semibold">
-          무료 다운로드
+      <div className="flex gap-2">
+        <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" className="flex-1">
+          <Button className="w-full btn-gradient text-white rounded-xl h-12 text-base font-semibold">
+            App Store
+          </Button>
+        </a>
+        <Button
+          variant="outline"
+          className="flex-1 rounded-xl h-12 text-base font-semibold text-muted-foreground border-border/50"
+          disabled
+        >
+          Google Play
         </Button>
-      </a>
+      </div>
     </div>
   );
 }
