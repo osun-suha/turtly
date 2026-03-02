@@ -24,7 +24,7 @@ const testimonials = [
     gradient: "from-sky-200 via-blue-100 to-indigo-200",
   },
   {
-    text: "ADHD로 꾸준함이 어려운데, 터틀리 커리큘럼이 쉽고 체계적이에요.",
+    text: "쉽게 포기하는 성향인데, 터틀리는 쉽고 체계적이라 꾸준히 하게돼요.",
     author: "최○○",
     info: "35세, 창업자",
     gradient: "from-violet-200 via-purple-100 to-pink-200",

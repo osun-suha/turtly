@@ -69,6 +69,12 @@ export default function FAQSection() {
             ))}
           </Accordion>
         </ScrollAnimator>
+
+        <ScrollAnimator delay={0.2}>
+          <p className="mt-10 text-[11px] text-muted-foreground/60 leading-relaxed text-center">
+            본 콘텐츠는 일반적인 건강 정보를 제공하며, 특정 질병의 진단이나 치료를 위한 의학적 조언이 아닙니다. 특정 질환(ADHD, 우울증 등)이 의심되거나 치료 중인 경우 전문의와 상담하시기 바랍니다. 이용 중 불편함이 발생할 경우 즉시 중단하시기 바랍니다.
+          </p>
+        </ScrollAnimator>
       </div>
     </section>
   );

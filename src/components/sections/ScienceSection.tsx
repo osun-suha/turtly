@@ -5,24 +5,32 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const scienceCards = [
   {
-    title: "전두엽 피질 두께 증가",
+    label: "자기조절력",
+    title: "집중 상승, 충동 감소",
     description:
-      "8주 꾸준한 명상 훈련으로 실행 기능과 의사결정을 담당하는 전두엽 피질이 물리적으로 두꺼워집니다.",
+      "명상은 전두엽을 강화해 판단력과 자기 조절 능력을 높여줍니다.",
+    source: "Lazar et al., 2005, NeuroReport",
   },
   {
-    title: "편도체 크기 감소",
+    label: "감정 안정",
+    title: "흔들리지 않는 중심",
     description:
-      "명상은 불안과 충동 반응을 담당하는 편도체의 과활성을 줄이고, 감정적 안정을 되찾게 합니다.",
+      "외부 자극에 과하게 반응하던 편도체가 안정되어 감정 조절이 쉬워집니다.",
+    source: "Hölzel et al., 2011, Psychiatry Research",
   },
   {
-    title: "잡생각의 원인, DMN 과활성 감소",
+    label: "잡생각 감소",
+    title: "머릿속 소음의 감소",
     description:
-      "멍하니 있을 때 후회, 걱정이 자동으로 떠오르는 DMN의 과활성을 낮추고, 지금 이 순간에 집중하는 TPN을 강화합니다.",
+      "잡생각이 자동으로 떠오르는 DMN이 조용해지고, 지금 이 순간에 집중하는 TPN이 강화됩니다.",
+    source: "Brewer et al., 2011, PNAS",
   },
   {
-    title: "도파민 수용체 민감도 향상",
+    label: "실행력 상승",
+    title: "내면의 동기 회복",
     description:
-      "명상은 도파민 수용체를 민감하게 만들어, 적은 자극으로도 동기와 실행이 가능하게 합니다.",
+      "즉각적 자극에 의존하던 패턴에서 벗어나 내적 동기와 실행력이 회복됩니다.",
+    source: "Kjaer et al., 2002, Nature Neuroscience",
   },
 ];
 
@@ -52,12 +60,17 @@ export default function ScienceSection() {
             <ScrollAnimator key={index} delay={index * 0.1}>
               <Card className="glass-dark hover:bg-white/[0.08] transition-all duration-300 h-full border-white/[0.06] hover:border-white/[0.12]">
                 <CardContent className="p-6 sm:p-7">
-                  <div className="w-2 h-2 rounded-full bg-brand-light mb-5" />
+                  <p className="text-xs font-medium text-brand-light mb-3 tracking-wide">
+                    {card.label}
+                  </p>
                   <h3 className="text-base font-semibold text-white mb-2.5">
                     {card.title}
                   </h3>
-                  <p className="text-sm text-white/50 leading-relaxed">
+                  <p className="text-sm text-white/50 leading-relaxed mb-4">
                     {card.description}
+                  </p>
+                  <p className="text-[11px] text-white/25">
+                    {card.source}
                   </p>
                 </CardContent>
               </Card>
@@ -66,15 +79,9 @@ export default function ScienceSection() {
         </div>
 
         <ScrollAnimator delay={0.5}>
-          <div className="mt-12 text-center text-xs text-white/30 max-w-2xl mx-auto space-y-1">
-            <p>
-              Jon Kabat-Zinn 박사 (MIT/Harvard Medical School), MBSR 프로그램
-              창시자
-            </p>
-            <p>
-              Sara Lazar 연구팀 (Harvard), 명상과 뇌 구조 변화 연구
-            </p>
-          </div>
+          <p className="mt-10 text-center text-[11px] text-white/25 max-w-2xl mx-auto leading-relaxed">
+            위 내용은 터틀리 앱의 효과를 보증하는 것이 아닌, 명상에 관한 학술 연구 결과입니다. 개인에 따라 효과는 다를 수 있습니다. 이용 중 불편함이 발생할 경우 즉시 중단하시기 바랍니다.
+          </p>
         </ScrollAnimator>
       </div>
     </section>

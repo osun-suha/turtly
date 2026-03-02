@@ -13,10 +13,10 @@ const APP_STORE_URL =
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showStoreMenu, setShowStoreMenu] = useState(false);
   const pathname = usePathname();
 
-  // Only homepage has dark hero, all other pages have light background
-  const hasDarkHero = pathname === "/";
+  const hasDarkHero = pathname === "/" || pathname === "/privacy" || pathname === "/terms";
   const useWhiteText = hasDarkHero && !scrolled;
 
   useEffect(() => {
@@ -24,6 +24,13 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (!showStoreMenu) return;
+    const close = () => setShowStoreMenu(false);
+    document.addEventListener("click", close);
+    return () => document.removeEventListener("click", close);
+  }, [showStoreMenu]);
 
   return (
     <header
@@ -69,25 +76,65 @@ export default function Header() {
               <ArrowUpRight size={12} className="opacity-50" />
             </a>
             <div className={`w-px h-5 mx-2 ${useWhiteText ? "bg-white/20" : "bg-border"}`} />
-            <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+            <div className="relative">
               <Button
                 size="sm"
                 className="btn-gradient text-white rounded-full px-5 font-medium"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowStoreMenu(!showStoreMenu);
+                }}
               >
                 다운로드
               </Button>
-            </a>
+              {showStoreMenu && (
+                <div className="absolute right-0 top-full mt-2 w-48 glass-strong rounded-xl shadow-lg border border-border/50 overflow-hidden">
+                  <a
+                    href={APP_STORE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-3 text-sm text-foreground hover:bg-black/[0.04] transition-colors"
+                  >
+                    App Store (iOS)
+                  </a>
+                  <div className="border-t border-border/30" />
+                  <span className="block px-4 py-3 text-sm text-muted-foreground cursor-default">
+                    Google Play (출시 예정)
+                  </span>
+                </div>
+              )}
+            </div>
           </nav>
 
           <div className="flex md:hidden items-center gap-2">
-            <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+            <div className="relative">
               <Button
                 size="sm"
                 className="btn-gradient text-white rounded-full px-4 text-xs font-medium"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowStoreMenu(!showStoreMenu);
+                }}
               >
                 다운로드
               </Button>
-            </a>
+              {showStoreMenu && (
+                <div className="absolute right-0 top-full mt-2 w-48 glass-strong rounded-xl shadow-lg border border-border/50 overflow-hidden">
+                  <a
+                    href={APP_STORE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-3 text-sm text-foreground hover:bg-black/[0.04] transition-colors"
+                  >
+                    App Store (iOS)
+                  </a>
+                  <div className="border-t border-border/30" />
+                  <span className="block px-4 py-3 text-sm text-muted-foreground cursor-default">
+                    Google Play (출시 예정)
+                  </span>
+                </div>
+              )}
+            </div>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`p-2 rounded-lg ${useWhiteText ? "text-white/70 hover:text-white hover:bg-white/[0.08]" : "text-muted-foreground hover:text-foreground hover:bg-black/[0.04]"}`}

@@ -7,7 +7,7 @@ const comparisonData = [
   {
     label: "목표",
     general: "스트레스 완화, 수면",
-    turtly: "집중력 훈련, 실행력 회복",
+    turtly: "집중력 훈련, 실행력 강화",
   },
   {
     label: "설계",
@@ -22,7 +22,7 @@ const comparisonData = [
   {
     label: "접근",
     general: "이완 중심",
-    turtly: "전두엽·작업기억·충동조절 직접 접근",
+    turtly: "집중력·자기 조절 훈련",
   },
   {
     label: "시간",
