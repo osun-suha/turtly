@@ -5,8 +5,6 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import PhoneMockup from "@/components/PhoneMockup";
 
-const APP_STORE_URL =
-  "https://apps.apple.com/kr/app/turtly-%ED%95%98%EB%A3%A8-5%EB%B6%84-%EB%AA%85%EC%83%81/id6758706673";
 
 export default function HeroSection() {
   return (
@@ -55,14 +53,19 @@ export default function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-3">
-              <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
-                <Button
-                  size="lg"
-                  className="btn-gradient text-white rounded-full px-8 h-12 text-base font-semibold"
+              <Button
+                asChild
+                size="lg"
+                className="rounded-full px-8 h-12 text-base font-medium bg-white text-black hover:bg-white/90"
+              >
+                <a
+                  href="https://apps.apple.com/kr/app/id6782556380"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  App Store 다운로드
-                </Button>
-              </a>
+                  App Store에서 다운로드
+                </a>
+              </Button>
               <Button
                 variant="outline"
                 size="lg"

@@ -3,9 +3,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 
-const APP_STORE_URL =
-  "https://apps.apple.com/kr/app/turtly-%ED%95%98%EB%A3%A8-5%EB%B6%84-%EB%AA%85%EC%83%81/id6758706673";
-
 export default function MobileCTA() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -22,17 +19,24 @@ export default function MobileCTA() {
       }`}
     >
       <div className="flex gap-2">
-        <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" className="flex-1">
-          <Button className="w-full btn-gradient text-white rounded-xl h-12 text-base font-semibold">
+        <Button
+          asChild
+          className="btn-gradient flex-1 rounded-xl h-12 text-base font-semibold text-white"
+        >
+          <a
+            href="https://apps.apple.com/kr/app/id6782556380"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             App Store
-          </Button>
-        </a>
+          </a>
+        </Button>
         <Button
           variant="outline"
           className="flex-1 rounded-xl h-12 text-base font-semibold text-muted-foreground border-border/50"
           disabled
         >
-          Google Play
+          Google Play 출시 예정
         </Button>
       </div>
     </div>

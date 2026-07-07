@@ -7,8 +7,6 @@ import { usePathname } from "next/navigation";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const APP_STORE_URL =
-  "https://apps.apple.com/kr/app/turtly-%ED%95%98%EB%A3%A8-5%EB%B6%84-%EB%AA%85%EC%83%81/id6758706673";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,9 +65,7 @@ export default function Header() {
               뉴스레터
             </Link>
             <a
-              href="https://open.kakao.com/o/gTp5u8ii"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:linings.biz@gmail.com"
               className={`px-3 py-2 text-sm transition-colors rounded-lg inline-flex items-center gap-1 ${useWhiteText ? "text-white/70 hover:text-white hover:bg-white/[0.08]" : "text-muted-foreground hover:text-foreground hover:bg-black/[0.04]"}`}
             >
               고객문의
@@ -90,12 +86,12 @@ export default function Header() {
               {showStoreMenu && (
                 <div className="absolute right-0 top-full mt-2 w-48 glass-strong rounded-xl shadow-lg border border-border/50 overflow-hidden">
                   <a
-                    href={APP_STORE_URL}
+                    href="https://apps.apple.com/kr/app/id6782556380"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block px-4 py-3 text-sm text-foreground hover:bg-black/[0.04] transition-colors"
+                    className="block px-4 py-3 text-sm text-foreground font-medium hover:bg-black/[0.04]"
                   >
-                    App Store (iOS)
+                    App Store
                   </a>
                   <div className="border-t border-border/30" />
                   <span className="block px-4 py-3 text-sm text-muted-foreground cursor-default">
@@ -121,12 +117,12 @@ export default function Header() {
               {showStoreMenu && (
                 <div className="absolute right-0 top-full mt-2 w-48 glass-strong rounded-xl shadow-lg border border-border/50 overflow-hidden">
                   <a
-                    href={APP_STORE_URL}
+                    href="https://apps.apple.com/kr/app/id6782556380"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block px-4 py-3 text-sm text-foreground hover:bg-black/[0.04] transition-colors"
+                    className="block px-4 py-3 text-sm text-foreground font-medium hover:bg-black/[0.04]"
                   >
-                    App Store (iOS)
+                    App Store
                   </a>
                   <div className="border-t border-border/30" />
                   <span className="block px-4 py-3 text-sm text-muted-foreground cursor-default">
@@ -164,10 +160,9 @@ export default function Header() {
               뉴스레터
             </Link>
             <a
-              href="https://open.kakao.com/o/gTp5u8ii"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:linings.biz@gmail.com"
               className="flex items-center gap-1 px-3 py-2.5 text-sm font-medium text-foreground rounded-lg hover:bg-black/[0.04]"
+              onClick={() => setIsOpen(false)}
             >
               고객문의
               <ArrowUpRight size={12} className="opacity-50" />
