@@ -17,7 +17,7 @@ export default function PrivacyPage() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
             개인정보처리방침
           </h1>
-          <p className="text-sm text-white/40">시행일: 2026년 7월 7일</p>
+          <p className="text-sm text-white/40">시행일: 2026년 7월 10일</p>
         </div>
       </div>
 
@@ -211,11 +211,58 @@ export default function PrivacyPage() {
             </p>
           </div>
 
-          {/* 6 */}
+          {/* 7 */}
           <div className="glass-strong rounded-2xl p-6 sm:p-8">
             <h2 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-brand" />
-              7. 개인정보의 파기 절차 및 방법
+              7. 개인정보의 국외 이전
+            </h2>
+            <p className="text-foreground/70 leading-relaxed mb-4">
+              터틀리는 서비스 제공 및 이용 분석을 위해 다음과 같이 개인정보를
+              국외로 이전할 수 있습니다.
+            </p>
+            <div className="space-y-4">
+              <div>
+                <p className="font-medium text-foreground mb-1.5">Supabase</p>
+                <ul className="space-y-1 text-foreground/70 leading-relaxed list-disc pl-5">
+                  <li>이전받는 자: Supabase, Inc.</li>
+                  <li>이전 국가: 미국 등 Supabase 서비스 제공 국가</li>
+                  <li>
+                    이전 항목: 이메일, 닉네임, 사용자 식별자, 약관·개인정보처리방침
+                    동의 및 연령 확인 기록, 온보딩 응답, 명상 기록 및 메모, 집중
+                    훈련·출석·루틴 등 서비스 이용 기록, 커뮤니티
+                    게시글·댓글·신고·차단 기록
+                  </li>
+                  <li>이전 목적: 회원 인증, 데이터 저장, 서비스 제공 및 계정 관리</li>
+                  <li>이전 일시 및 방법: 서비스 이용 시 네트워크를 통한 전송</li>
+                  <li>보유 및 이용 기간: 회원 탈퇴 또는 위탁계약 종료 시까지</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-medium text-foreground mb-1.5">PostHog</p>
+                <ul className="space-y-1 text-foreground/70 leading-relaxed list-disc pl-5">
+                  <li>이전받는 자: PostHog, Inc.</li>
+                  <li>이전 국가: EU 등 PostHog 서비스 제공 국가</li>
+                  <li>
+                    이전 항목: 사용자 식별자, 앱 이용 이벤트 및 이벤트 속성,
+                    앱·기기·OS·접속 환경 정보
+                  </li>
+                  <li>이전 목적: 서비스 이용 분석, 오류 확인 및 기능 개선</li>
+                  <li>이전 일시 및 방법: 서비스 이용 시 네트워크를 통한 전송</li>
+                  <li>
+                    보유 및 이용 기간: 서비스 이용 목적 달성 또는 위탁계약 종료
+                    시까지
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* 8 */}
+          <div className="glass-strong rounded-2xl p-6 sm:p-8">
+            <h2 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand" />
+              8. 개인정보의 파기 절차 및 방법
             </h2>
             <p className="text-foreground/70 leading-relaxed mb-4">
               터틀리는 개인정보 보유 기간이 지나거나 처리 목적이 달성되어
@@ -233,7 +280,7 @@ export default function PrivacyPage() {
           <div className="glass-strong rounded-2xl p-6 sm:p-8">
             <h2 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-brand" />
-              8. 이용자의 권리와 행사 방법
+              9. 이용자의 권리와 행사 방법
             </h2>
             <p className="text-foreground/70 leading-relaxed mb-4">
               이용자는 언제든지 본인의 개인정보에 대해 열람, 정정, 삭제,
@@ -260,7 +307,7 @@ export default function PrivacyPage() {
           <div className="glass-strong rounded-2xl p-6 sm:p-8">
             <h2 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-brand" />
-              9. 개인정보의 안전성 확보 조치
+              10. 개인정보의 안전성 확보 조치
             </h2>
             <p className="text-foreground/70 leading-relaxed mb-4">
               터틀리는 개인정보 보호를 위해 다음과 같은 조치를 합니다.
@@ -278,7 +325,7 @@ export default function PrivacyPage() {
           <div className="glass-strong rounded-2xl p-6 sm:p-8">
             <h2 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-brand" />
-              10. 앱 접근권한
+              11. 앱 접근권한
             </h2>
             <p className="text-foreground/70 leading-relaxed mb-4">
               터틀리는 서비스 제공에 필요한 경우 앱 접근권한을 요청할 수 있습니다.
@@ -300,7 +347,7 @@ export default function PrivacyPage() {
           <div className="glass-strong rounded-2xl p-6 sm:p-8">
             <h2 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-brand" />
-              11. 개인정보 보호책임자
+              12. 개인정보 보호책임자
             </h2>
             <p className="text-foreground/70 leading-relaxed mb-2">
               개인정보 보호책임자: 권유나
@@ -324,7 +371,7 @@ export default function PrivacyPage() {
           <div className="glass-strong rounded-2xl p-6 sm:p-8">
             <h2 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-brand" />
-              12. 권익침해 구제 방법
+              13. 권익침해 구제 방법
             </h2>
             <p className="text-foreground/70 leading-relaxed">
               이용자는 개인정보 침해에 대한 상담이나 분쟁 해결이 필요한 경우
@@ -337,7 +384,7 @@ export default function PrivacyPage() {
           <div className="glass-strong rounded-2xl p-6 sm:p-8">
             <h2 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-brand" />
-              13. 개인정보처리방침의 변경
+              14. 개인정보처리방침의 변경
             </h2>
             <p className="text-foreground/70 leading-relaxed">
               본 개인정보처리방침은 관련 법령 또는 서비스 변경에 따라 수정될 수
