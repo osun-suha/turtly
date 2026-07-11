@@ -16,7 +16,7 @@ const scienceCards = [
     title: "흔들리지 않는 중심",
     description:
       "외부 자극에 과하게 반응하던 편도체가 안정되어 감정 조절이 쉬워집니다.",
-    source: "Hölzel et al., 2011, Psychiatry Research",
+    source: "Hölzel et al., 2010, Soc. Cogn. Affect. Neurosci.",
   },
   {
     label: "잡생각 감소",
@@ -30,7 +30,7 @@ const scienceCards = [
     title: "내면의 동기 회복",
     description:
       "즉각적 자극에 의존하던 패턴에서 벗어나 내적 동기와 실행력이 회복됩니다.",
-    source: "Kjaer et al., 2002, Nature Neuroscience",
+    source: "Kjaer et al., 2002, Cognitive Brain Research",
   },
 ];
 

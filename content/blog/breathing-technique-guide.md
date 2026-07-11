@@ -23,7 +23,7 @@ thumbnail: "/blog/breathing-guide.svg"
 
 ### 2. 4-7-8 호흡법
 
-수면 전문가 Andrew Weil 박사가 추천하는 호흡법입니다.
+통합의학 전문가 Andrew Weil 박사가 대중화한 호흡법입니다.
 
 - 4초 들이마시기
 - 7초 참기
