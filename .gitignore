@@ -24,6 +24,12 @@
 .DS_Store
 *.pem
 
+# backup / scratch assets (원본·백업 이미지는 저장소에 커밋하지 않음)
+*.bak
+/_old_screens/
+/터틀리*.jpeg
+/터틀리*.png
+
 # debug
 npm-debug.log*
 yarn-debug.log*
