@@ -60,6 +60,11 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        {/* 네이버 서치어드바이저 사이트 소유확인 */}
+        <meta
+          name="naver-site-verification"
+          content="d87f121d7732103242e06b1ff3bacc937e0fab74"
+        />
         {/* GA4 - 측정 ID를 아래 G-XXXXXXXXXX 부분에 넣으세요 */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
