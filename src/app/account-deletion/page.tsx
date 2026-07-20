@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "계정 삭제 안내 | 터틀리",
   description: "터틀리 앱 계정 및 관련 데이터 삭제 요청 안내",
+  alternates: { canonical: "/account-deletion" },
 };
 
 export default function AccountDeletionPage() {
@@ -71,10 +72,10 @@ export default function AccountDeletionPage() {
             <p className="text-foreground/70 leading-relaxed">
               앱 내 삭제가 어려운 경우, 가입하신 이메일로{" "}
               <a
-                href="mailto:linings.biz@gmail.com"
+                href="mailto:team@turtly.app"
                 className="text-brand font-medium hover:underline"
               >
-                linings.biz@gmail.com
+                team@turtly.app
               </a>
               에 계정 삭제를 요청해 주세요. 본인 확인 후 관련 법령에 따라 지체 없이
               처리합니다.
@@ -152,10 +153,10 @@ export default function AccountDeletionPage() {
             <p className="text-foreground/70 leading-relaxed">
               계정 삭제와 관련한 문의는{" "}
               <a
-                href="mailto:linings.biz@gmail.com"
+                href="mailto:team@turtly.app"
                 className="text-brand font-medium hover:underline"
               >
-                linings.biz@gmail.com
+                team@turtly.app
               </a>
               으로 연락해 주시기 바랍니다.
             </p>

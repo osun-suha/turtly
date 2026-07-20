@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     "마음챙김",
     "뇌과학",
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "TURTLY | 산만한 뇌를 가진 우리를 위한 집중력 훈련 명상 앱",
     description:
@@ -30,21 +33,12 @@ export const metadata: Metadata = {
     siteName: "TURTLY",
     locale: "ko_KR",
     type: "website",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "TURTLY - 집중력 훈련 명상 앱",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "TURTLY | 집중력 훈련 명상 앱",
     description:
       "느리지만 꾸준히, 나만의 속도로. 하루 5분, 산만한 뇌를 훈련하세요.",
-    images: ["/og-image.png"],
   },
   robots: {
     index: true,

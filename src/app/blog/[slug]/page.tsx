@@ -6,8 +6,6 @@ import type { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const APP_STORE_URL =
-  "https://apps.apple.com/kr/app/turtly-%ED%95%98%EB%A3%A8-5%EB%B6%84-%EB%AA%85%EC%83%81/id6758706673";
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -30,10 +28,19 @@ export async function generateMetadata({
   return {
     title: `${post.title} | TURTLY 뉴스레터`,
     description: post.summary,
+    alternates: { canonical: `/blog/${slug}` },
     openGraph: {
       title: post.title,
       description: post.summary,
+      url: `/blog/${slug}`,
       type: "article",
+      publishedTime: post.date,
+      images: [{ url: `/blog/${slug}/opengraph-image` }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.summary,
     },
   };
 }
@@ -46,8 +53,31 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.summary,
+    datePublished: post.date,
+    author: { "@type": "Organization", name: "TURTLY" },
+    publisher: {
+      "@type": "Organization",
+      name: "TURTLY",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://turtly.app/logo.png",
+      },
+    },
+    mainEntityOfPage: `https://turtly.app/blog/${slug}`,
+    image: `https://turtly.app/blog/${slug}/opengraph-image`,
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Dark Hero Banner */}
       <section className="bg-mesh-dark pt-28 pb-14 sm:pt-32 sm:pb-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -106,21 +136,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Button
+              variant="outline"
+              className="rounded-full px-6 font-semibold text-muted-foreground cursor-default border-border/50 w-full sm:w-auto"
+              disabled
             >
-              <Button className="btn-gradient text-white rounded-full px-6 font-semibold w-full sm:w-auto">
-                App Store
-              </Button>
-            </a>
+              App Store 출시 예정
+            </Button>
             <Button
               variant="outline"
               className="rounded-full px-6 font-semibold text-muted-foreground cursor-default border-border/50"
               disabled
             >
-              Google Play
+              Google Play 출시 예정
             </Button>
           </div>
         </div>

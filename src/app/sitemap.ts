@@ -37,6 +37,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
+    {
+      url: `${baseUrl}/account-deletion`,
+      lastModified: new Date("2026-06-24"),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
     ...blogEntries,
   ];
 }

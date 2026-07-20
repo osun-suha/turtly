@@ -47,16 +47,6 @@ export default function Footer() {
                   뉴스레터
                 </Link>
               </li>
-              <li>
-                <a
-                  href="https://open.kakao.com/o/gTp5u8ii"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  카카오톡 문의
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -82,11 +72,19 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="mailto:picko.corp@gmail.com"
+                <Link
+                  href="/account-deletion"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  picko.corp@gmail.com
+                  계정 삭제 안내
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="mailto:team@turtly.app"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  team@turtly.app
                 </a>
               </li>
             </ul>

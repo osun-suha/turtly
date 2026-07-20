@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "이용약관 | TURTLY",
   description: "TURTLY 이용약관",
+  alternates: { canonical: "/terms" },
 };
 
 export default function TermsPage() {
@@ -194,10 +195,10 @@ export default function TermsPage() {
             </h2>
             <p className="text-foreground/70 leading-relaxed">
               <a
-                href="mailto:linings.biz@gmail.com"
+                href="mailto:team@turtly.app"
                 className="text-brand font-medium hover:underline"
               >
-                linings.biz@gmail.com
+                team@turtly.app
               </a>
             </p>
           </div>

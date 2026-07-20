@@ -65,7 +65,7 @@ export default function Header() {
               뉴스레터
             </Link>
             <a
-              href="mailto:linings.biz@gmail.com"
+              href="mailto:team@turtly.app"
               className={`px-3 py-2 text-sm transition-colors rounded-lg inline-flex items-center gap-1 ${useWhiteText ? "text-white/70 hover:text-white hover:bg-white/[0.08]" : "text-muted-foreground hover:text-foreground hover:bg-black/[0.04]"}`}
             >
               고객문의
@@ -160,7 +160,7 @@ export default function Header() {
               뉴스레터
             </Link>
             <a
-              href="mailto:linings.biz@gmail.com"
+              href="mailto:team@turtly.app"
               className="flex items-center gap-1 px-3 py-2.5 text-sm font-medium text-foreground rounded-lg hover:bg-black/[0.04]"
               onClick={() => setIsOpen(false)}
             >

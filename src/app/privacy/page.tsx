@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "개인정보처리방침 | TURTLY",
   description: "TURTLY 개인정보처리방침",
+  alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {
@@ -295,10 +296,10 @@ export default function PrivacyPage() {
             <p className="text-foreground/70 leading-relaxed">
               문의:{" "}
               <a
-                href="mailto:linings.biz@gmail.com"
+                href="mailto:team@turtly.app"
                 className="text-brand font-medium hover:underline"
               >
-                linings.biz@gmail.com
+                team@turtly.app
               </a>
             </p>
           </div>
@@ -355,10 +356,10 @@ export default function PrivacyPage() {
             <p className="text-foreground/70 leading-relaxed mb-4">
               이메일:{" "}
               <a
-                href="mailto:linings.biz@gmail.com"
+                href="mailto:team@turtly.app"
                 className="text-brand font-medium hover:underline"
               >
-                linings.biz@gmail.com
+                team@turtly.app
               </a>
             </p>
             <p className="text-foreground/70 leading-relaxed">

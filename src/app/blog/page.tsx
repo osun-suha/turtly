@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "뉴스레터 | TURTLY - 집중력과 뇌과학 이야기",
   description:
     "터틀리가 전하는 집중력, 명상, 뇌과학에 대한 유익한 콘텐츠를 만나보세요.",
+  alternates: { canonical: "/blog" },
 };
 
 export default function BlogPage() {
