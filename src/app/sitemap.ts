@@ -1,6 +1,9 @@
 import { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 
+// 정적 export(output: export)에서 sitemap.xml을 정적 파일로 생성
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://turtly.app";
 
