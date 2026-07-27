@@ -138,11 +138,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button
-              variant="outline"
-              className="rounded-full px-6 font-semibold text-muted-foreground cursor-default border-border/50 w-full sm:w-auto"
-              disabled
+              asChild
+              className="btn-gradient rounded-full px-6 font-semibold text-white w-full sm:w-auto"
             >
-              App Store 출시 예정
+              <a
+                href="https://apps.apple.com/kr/app/id6782556380"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                App Store에서 다운로드
+              </a>
             </Button>
             <Button
               variant="outline"
