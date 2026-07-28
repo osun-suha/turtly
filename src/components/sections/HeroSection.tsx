@@ -38,7 +38,7 @@ export default function HeroSection() {
                 height={16}
                 className="rounded-sm"
               />
-              명상앱 터틀리 TURTLY
+              ADHD-Friendly 집중력 훈련 명상앱 터틀리 TURTLY
             </motion.div>
 
             <h1 className="text-4xl sm:text-5xl font-bold text-white leading-[1.1] mb-5 tracking-tight">
@@ -49,7 +49,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-lg sm:text-xl text-white/50 max-w-lg mb-10 leading-relaxed">
-              하루 5분, 명상으로 집중을 훈련하세요.
+              ADHD-Friendly 집중력 훈련 명상앱, 터틀리. 하루 5분 명상으로 집중을 훈련하세요.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-3">

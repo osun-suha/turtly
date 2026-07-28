@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "이용약관 | TURTLY",
+  title: "이용약관",
   description: "TURTLY 이용약관",
   alternates: { canonical: "/terms" },
 };

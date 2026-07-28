@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "계정 삭제 안내 | 터틀리",
+  title: "계정 삭제 안내",
   description: "터틀리 앱 계정 및 관련 데이터 삭제 요청 안내",
   alternates: { canonical: "/account-deletion" },
 };

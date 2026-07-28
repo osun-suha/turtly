@@ -26,7 +26,7 @@ export async function generateMetadata({
   if (!post) return {};
 
   return {
-    title: `${post.title} | TURTLY 뉴스레터`,
+    title: `${post.title} - 뉴스레터`,
     description: post.summary,
     alternates: { canonical: `/blog/${slug}` },
     openGraph: {
