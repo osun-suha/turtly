@@ -130,7 +130,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               className="mx-auto mb-4 rounded-lg"
             />
             <p className="text-lg font-semibold text-foreground mb-2">
-              ADHD-Friendly 집중력 훈련 명상앱
+              ADHD-Friendly 명상앱
             </p>
             <p className="text-muted-foreground">
               하루 5분, 뇌과학 기반 집중력 훈련을 지금 시작하세요

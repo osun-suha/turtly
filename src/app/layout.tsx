@@ -8,13 +8,13 @@ import Script from "next/script";
 export const metadata: Metadata = {
   metadataBase: new URL("https://turtly.app"),
   title: {
-    default: "터틀리 TURTLY | ADHD-Friendly 집중력 훈련 명상앱",
+    default: "터틀리 TURTLY | ADHD-Friendly 명상앱",
     template: "%s | 터틀리 TURTLY",
   },
   description:
-    "ADHD-Friendly 집중력 훈련 명상앱 터틀리. 느리지만 꾸준히, 나만의 속도로. 하루 5분 명상으로 산만한 뇌를 훈련하세요. 뇌과학 기반 12주 집중력 훈련 커리큘럼.",
+    "ADHD-Friendly 명상앱 터틀리. 느리지만 꾸준히, 나만의 속도로. 하루 5분 명상으로 산만한 뇌를 훈련하세요. 뇌과학 기반 12주 집중력 훈련 커리큘럼.",
   keywords: [
-    "ADHD-Friendly 집중력 훈련 명상앱",
+    "ADHD-Friendly 명상앱",
     "ADHD 명상앱",
     "ADHD 집중력",
     "터틀리",
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "터틀리 TURTLY | ADHD-Friendly 집중력 훈련 명상앱",
+    title: "터틀리 TURTLY | ADHD-Friendly 명상앱",
     description:
-      "ADHD-Friendly 집중력 훈련 명상앱. 느리지만 꾸준히, 나만의 속도로. 하루 5분 명상으로 산만한 뇌를 훈련하세요.",
+      "ADHD-Friendly 명상앱. 느리지만 꾸준히, 나만의 속도로. 하루 5분 명상으로 산만한 뇌를 훈련하세요.",
     url: "https://turtly.app",
     siteName: "터틀리 TURTLY",
     locale: "ko_KR",
@@ -45,15 +45,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "터틀리 TURTLY - ADHD-Friendly 집중력 훈련 명상앱",
+        alt: "터틀리 TURTLY - ADHD-Friendly 명상앱",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "터틀리 TURTLY | ADHD-Friendly 집중력 훈련 명상앱",
+    title: "터틀리 TURTLY | ADHD-Friendly 명상앱",
     description:
-      "ADHD-Friendly 집중력 훈련 명상앱. 하루 5분 명상으로 산만한 뇌를 훈련하세요.",
+      "ADHD-Friendly 명상앱. 하루 5분 명상으로 산만한 뇌를 훈련하세요.",
     images: ["/og-image.png"],
   },
   robots: {

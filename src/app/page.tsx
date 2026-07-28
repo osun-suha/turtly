@@ -24,18 +24,18 @@ const jsonLd = {
       url: "https://turtly.app",
       name: "터틀리 TURTLY",
       description:
-        "ADHD-Friendly 집중력 훈련 명상앱",
+        "ADHD-Friendly 명상앱",
       publisher: { "@id": "https://turtly.app/#organization" },
       inLanguage: "ko-KR",
     },
     {
       "@type": "MobileApplication",
       name: "터틀리 (TURTLY)",
-      alternateName: "ADHD-Friendly 집중력 훈련 명상앱",
+      alternateName: "ADHD-Friendly 명상앱",
       operatingSystem: "iOS",
       applicationCategory: "HealthApplication",
       description:
-        "ADHD-Friendly 집중력 훈련 명상앱. 하루 5분 명상으로 산만한 뇌를 훈련하는 뇌과학 기반 앱",
+        "ADHD-Friendly 명상앱. 하루 5분 명상으로 산만한 뇌를 훈련하는 뇌과학 기반 앱",
       offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
       downloadUrl: "https://apps.apple.com/kr/app/id6782556380",
     },
