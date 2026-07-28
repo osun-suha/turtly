@@ -1,8 +1,8 @@
 import { getAllPosts } from "@/lib/blog";
 import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
 import { Card, CardContent } from "@/components/ui/card";
+import BlogThumbnail from "@/components/BlogThumbnail";
 
 export const metadata: Metadata = {
   title: "뉴스레터 - ADHD 집중력과 뇌과학 이야기",
@@ -36,7 +36,8 @@ export default function BlogPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {posts.length === 0 ? (
             <div className="text-center py-20">
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src="/logo.png"
                 alt=""
                 width={48}
@@ -57,24 +58,10 @@ export default function BlogPage() {
                 >
                   <Card className="glass border-border/50 overflow-hidden hover:border-brand/20 hover:shadow-lg hover:shadow-brand/5 transition-all duration-300 h-full">
                     <div className="aspect-video relative overflow-hidden">
-                      {post.thumbnail ? (
-                        <Image
-                          src={post.thumbnail}
-                          alt={post.title}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                      ) : (
-                        <div className="w-full h-full bg-gradient-to-br from-brand-900 to-brand-dark flex items-center justify-center">
-                          <Image
-                            src="/logo.png"
-                            alt=""
-                            width={32}
-                            height={32}
-                            className="opacity-20 rounded-md"
-                          />
-                        </div>
-                      )}
+                      <BlogThumbnail
+                        title={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
                     </div>
                     <CardContent className="p-5 flex flex-col flex-1">
                       <time className="text-xs text-muted-foreground mb-2">

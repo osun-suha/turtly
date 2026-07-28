@@ -5,6 +5,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import BlogThumbnail from "@/components/BlogThumbnail";
 
 
 interface BlogPostPageProps {
@@ -97,20 +98,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
       </section>
 
-      {/* Thumbnail */}
-      {post.thumbnail && (
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
-          <div className="rounded-2xl overflow-hidden shadow-xl">
-            <Image
-              src={post.thumbnail}
-              alt={post.title}
-              width={800}
-              height={450}
-              className="w-full h-auto"
-            />
-          </div>
+      {/* Thumbnail (제목 기반 자동 생성) */}
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+        <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
+          <BlogThumbnail title={post.title} className="w-full h-full" />
         </div>
-      )}
+      </div>
 
       {/* Article Content */}
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
