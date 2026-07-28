@@ -47,9 +47,8 @@ export default function DifferentiationSection() {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Headspace나 Calm 같은 일반 명상앱은 스트레스 완화에는
-                  효과적입니다. 하지만 집중력이 유독 어려운 뇌에 최적화되어
-                  있지 않습니다.
+                  대부분의 명상앱은 스트레스 완화와 이완에 초점을 둡니다.
+                  하지만 집중력이 유독 어려운 뇌에 최적화되어 있지는 않습니다.
                 </p>
                 <p>
                   집중하라는 지시 자체가 부담이 되고, 좋다고 알면서도 시작을
